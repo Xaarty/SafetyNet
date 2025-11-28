@@ -11,21 +11,19 @@ import java.util.List;
 @Repository
 public class PersonRepository {
 
+    private final DataReaderUtil reader;
     private final List<Person> persons;
 
-    public PersonRepository() throws IOException {
-        this(new DataReaderUtil(new ObjectMapper()));
-    }
-
-    public PersonRepository(DataReaderUtil reader) throws IOException {
+    public PersonRepository( DataReaderUtil reader) throws IOException {
+        this.reader = reader;
         this.persons = reader.getAllPersons();
     }
 
-    public List<Person> getAll() throws IOException {
+    public List<Person> getAll() {
         return persons;
     }
 
-    public Person getByName(String firstName, String lastName) throws IOException {
+    public Person getByName(String firstName, String lastName) {
         return persons.stream()
                 .filter(persons
                         -> persons.getFirstName().equals(firstName)
@@ -36,21 +34,25 @@ public class PersonRepository {
 
     public Person save(Person person) {
         persons.add(person);
+        reader.writeAllPersons(persons);
         return person;
     }
 
-    public Person update(Person person) throws IOException {
+    public Person update(Person person) {
         Person personFound = getByName(person.getFirstName(), person.getLastName());
         personFound.setAddress(person.getAddress());
         personFound.setCity(person.getCity());
         personFound.setZip(person.getZip());
         personFound.setPhone(person.getPhone());
         personFound.setEmail(person.getEmail());
+
+        reader.writeAllPersons(persons);
         return person;
     }
 
-    public void remove(String fistName, String lastName) throws IOException {
+    public void remove(String fistName, String lastName) {
         Person person = getByName(fistName, lastName);
         persons.remove(person);
+        reader.writeAllPersons(persons);
     }
 }

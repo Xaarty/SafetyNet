@@ -13,21 +13,21 @@ import java.util.List;
 
     @Repository
     public class MedicalRecordRepository {
+
+        private final DataReaderUtil reader;
         private final List<MedicalRecord> medicalRecords;
 
-        public MedicalRecordRepository() throws IOException {
-            this(new DataReaderUtil(new ObjectMapper()));
-        }
 
         public MedicalRecordRepository(DataReaderUtil reader) throws IOException {
+            this.reader = reader;
             this.medicalRecords = reader.getAllMedicalRecords();
         }
 
-        public List<MedicalRecord> getAll() throws IOException {
+        public List<MedicalRecord> getAll() {
             return medicalRecords;
         }
 
-        public MedicalRecord getByName(String firstName, String lastName) throws IOException {
+        public MedicalRecord getByName(String firstName, String lastName) {
             return medicalRecords.stream()
                     .filter(medicalRecords
                             -> medicalRecords.getFirstName().equals(firstName)
@@ -38,6 +38,7 @@ import java.util.List;
 
         public MedicalRecord save(MedicalRecord medicalRecord) {
             medicalRecords.add(medicalRecord);
+            reader.writeAllMedicalRecords(medicalRecords);
             return medicalRecord;
         }
 
@@ -46,11 +47,14 @@ import java.util.List;
             medicalRecordFound.setBirthdate(medicalRecord.getBirthdate());
             medicalRecordFound.setMedications(medicalRecord.getMedications());
             medicalRecordFound.setAllergies(medicalRecord.getAllergies());
+
+            reader.writeAllMedicalRecords(medicalRecords);
             return medicalRecord;
         }
 
         public void remove(String fistName, String lastName) throws IOException {
             MedicalRecord medicalRecord = getByName(fistName, lastName);
             medicalRecords.remove(medicalRecord);
+            reader.writeAllMedicalRecords(medicalRecords);
         }
     }

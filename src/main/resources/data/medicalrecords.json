@@ -1,27 +1,147 @@
 {
-  "medicalrecords": [
-    { "firstName":"John", "lastName":"Boyd", "birthdate":"03/06/1984", "medications":["aznol:350mg", "hydrapermazol:100mg"], "allergies":["nillacilan"] },
-    { "firstName":"Jacob", "lastName":"Boyd", "birthdate":"03/06/1989", "medications":["pharmacol:5000mg", "terazine:10mg", "noznazol:250mg"], "allergies":[] },
-    { "firstName":"Tenley", "lastName":"Boyd", "birthdate":"02/18/2012", "medications":[], "allergies":["peanut"] },
-    { "firstName":"Roger", "lastName":"Boyd", "birthdate":"09/06/2017", "medications":[], "allergies":[] },
-    { "firstName":"Felicia", "lastName":"Boyd","birthdate":"01/08/1986", "medications":["tetracyclaz:650mg"], "allergies":["xilliathal"] },
-    { "firstName":"Jonanathan", "lastName":"Marrack", "birthdate":"01/03/1989", "medications":[], "allergies":[] },
-    { "firstName":"Tessa", "lastName":"Carman", "birthdate":"02/18/2012", "medications":[], "allergies":[] },
-    { "firstName":"Peter", "lastName":"Duncan", "birthdate":"09/06/2000", "medications":[], "allergies":["shellfish"] },
-    { "firstName":"Foster", "lastName":"Shepard", "birthdate":"01/08/1980", "medications":[], "allergies":[] },
-    { "firstName":"Tony", "lastName":"Cooper", "birthdate":"03/06/1994", "medications":["hydrapermazol:300mg", "dodoxadin:30mg"], "allergies":["shellfish"] },
-    { "firstName":"Lily", "lastName":"Cooper", "birthdate":"03/06/1994", "medications":[], "allergies":[] },
-    { "firstName":"Sophia", "lastName":"Zemicks", "birthdate":"03/06/1988", "medications":["aznol:60mg", "hydrapermazol:900mg", "pharmacol:5000mg", "terazine:500mg"], "allergies":["peanut", "shellfish", "aznol"] },
-    { "firstName":"Warren", "lastName":"Zemicks", "birthdate":"03/06/1985", "medications":[], "allergies":[] },
-    { "firstName":"Zach", "lastName":"Zemicks", "birthdate":"03/06/2017", "medications":[], "allergies":[] },
-    { "firstName":"Reginold", "lastName":"Walker", "birthdate":"08/30/1979", "medications":["thradox:700mg"], "allergies":["illisoxian"] },
-    { "firstName":"Jamie", "lastName":"Peters", "birthdate":"03/06/1982", "medications":[], "allergies":[] },
-    { "firstName":"Ron", "lastName":"Peters", "birthdate":"04/06/1965", "medications":[], "allergies":[] },
-    { "firstName":"Allison", "lastName":"Boyd", "birthdate":"03/15/1965", "medications":["aznol:200mg"], "allergies":["nillacilan"] },
-    { "firstName":"Brian", "lastName":"Stelzer", "birthdate":"12/06/1975", "medications":["ibupurin:200mg", "hydrapermazol:400mg"], "allergies":["nillacilan"] },
-    { "firstName":"Shawna", "lastName":"Stelzer", "birthdate":"07/08/1980", "medications":[], "allergies":[] },
-    { "firstName":"Kendrik", "lastName":"Stelzer", "birthdate":"03/06/2014", "medications":["noxidian:100mg", "pharmacol:2500mg"], "allergies":[] },
-    { "firstName":"Clive", "lastName":"Ferguson", "birthdate":"03/06/1994", "medications":[], "allergies":[] },
-    { "firstName":"Eric", "lastName":"Cadigan", "birthdate":"08/06/1945", "medications":["tradoxidine:400mg"], "allergies":[] }
-  ]
+  "medicalrecords" : [ {
+    "lastName" : "Boyd",
+    "firstName" : "John",
+    "birthdate" : "03/06/1984",
+    "medications" : [ "aznol:350mg", "hydrapermazol:100mg" ],
+    "allergies" : [ "nillacilan" ]
+  }, {
+    "lastName" : "Boyd",
+    "firstName" : "Jacob",
+    "birthdate" : "03/06/1989",
+    "medications" : [ "pharmacol:5000mg", "terazine:10mg", "noznazol:250mg" ],
+    "allergies" : [ ]
+  }, {
+    "lastName" : "Boyd",
+    "firstName" : "Tenley",
+    "birthdate" : "02/18/2012",
+    "medications" : [ ],
+    "allergies" : [ "peanut" ]
+  }, {
+    "lastName" : "Boyd",
+    "firstName" : "Roger",
+    "birthdate" : "09/06/2017",
+    "medications" : [ ],
+    "allergies" : [ ]
+  }, {
+    "lastName" : "Boyd",
+    "firstName" : "Felicia",
+    "birthdate" : "01/08/1986",
+    "medications" : [ "tetracyclaz:650mg" ],
+    "allergies" : [ "xilliathal" ]
+  }, {
+    "lastName" : "Marrack",
+    "firstName" : "Jonanathan",
+    "birthdate" : "01/03/1989",
+    "medications" : [ ],
+    "allergies" : [ ]
+  }, {
+    "lastName" : "Carman",
+    "firstName" : "Tessa",
+    "birthdate" : "02/18/2012",
+    "medications" : [ ],
+    "allergies" : [ ]
+  }, {
+    "lastName" : "Duncan",
+    "firstName" : "Peter",
+    "birthdate" : "09/06/2000",
+    "medications" : [ ],
+    "allergies" : [ "shellfish" ]
+  }, {
+    "lastName" : "Shepard",
+    "firstName" : "Foster",
+    "birthdate" : "01/08/1980",
+    "medications" : [ ],
+    "allergies" : [ ]
+  }, {
+    "lastName" : "Cooper",
+    "firstName" : "Tony",
+    "birthdate" : "03/06/1994",
+    "medications" : [ "hydrapermazol:300mg", "dodoxadin:30mg" ],
+    "allergies" : [ "shellfish" ]
+  }, {
+    "lastName" : "Cooper",
+    "firstName" : "Lily",
+    "birthdate" : "03/06/1994",
+    "medications" : [ ],
+    "allergies" : [ ]
+  }, {
+    "lastName" : "Zemicks",
+    "firstName" : "Sophia",
+    "birthdate" : "03/06/1988",
+    "medications" : [ "aznol:60mg", "hydrapermazol:900mg", "pharmacol:5000mg", "terazine:500mg" ],
+    "allergies" : [ "peanut", "shellfish", "aznol" ]
+  }, {
+    "lastName" : "Zemicks",
+    "firstName" : "Warren",
+    "birthdate" : "03/06/1985",
+    "medications" : [ ],
+    "allergies" : [ ]
+  }, {
+    "lastName" : "Zemicks",
+    "firstName" : "Zach",
+    "birthdate" : "03/06/2017",
+    "medications" : [ ],
+    "allergies" : [ ]
+  }, {
+    "lastName" : "Walker",
+    "firstName" : "Reginold",
+    "birthdate" : "08/30/1979",
+    "medications" : [ "thradox:700mg" ],
+    "allergies" : [ "illisoxian" ]
+  }, {
+    "lastName" : "Peters",
+    "firstName" : "Jamie",
+    "birthdate" : "03/06/1982",
+    "medications" : [ ],
+    "allergies" : [ ]
+  }, {
+    "lastName" : "Peters",
+    "firstName" : "Ron",
+    "birthdate" : "04/06/1965",
+    "medications" : [ ],
+    "allergies" : [ ]
+  }, {
+    "lastName" : "Boyd",
+    "firstName" : "Allison",
+    "birthdate" : "03/15/1965",
+    "medications" : [ "aznol:200mg" ],
+    "allergies" : [ "nillacilan" ]
+  }, {
+    "lastName" : "Stelzer",
+    "firstName" : "Brian",
+    "birthdate" : "12/06/1975",
+    "medications" : [ "ibupurin:200mg", "hydrapermazol:400mg" ],
+    "allergies" : [ "nillacilan" ]
+  }, {
+    "lastName" : "Stelzer",
+    "firstName" : "Shawna",
+    "birthdate" : "07/08/1980",
+    "medications" : [ ],
+    "allergies" : [ ]
+  }, {
+    "lastName" : "Stelzer",
+    "firstName" : "Kendrik",
+    "birthdate" : "03/06/2014",
+    "medications" : [ "noxidian:100mg", "pharmacol:2500mg" ],
+    "allergies" : [ ]
+  }, {
+    "lastName" : "Ferguson",
+    "firstName" : "Clive",
+    "birthdate" : "03/06/1994",
+    "medications" : [ ],
+    "allergies" : [ ]
+  }, {
+    "lastName" : "Cadigan",
+    "firstName" : "Eric",
+    "birthdate" : "08/06/1945",
+    "medications" : [ "tradoxidine:400mg" ],
+    "allergies" : [ ]
+  }, {
+    "lastName" : "B",
+    "firstName" : "J",
+    "birthdate" : "03/06/2000",
+    "medications" : [ "aznol:350mg", "hydrapermazol:100mg" ],
+    "allergies" : [ "nillacilan" ]
+  } ]
 }
